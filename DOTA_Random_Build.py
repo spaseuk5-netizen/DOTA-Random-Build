@@ -2,8 +2,12 @@ import random
 
 roles = ["5 pos", "4 pos", "3 pos", "2 pos", "1 pos"]
 
+start_buy = [
+    "Wraith Band", "Magic Wand", "Bracer", "Null Talisman"
+]
+
 heroes = [
-"Abaddon", "Alchemist", "Ancient Apparition", "Anti-Mage", "Arc Warden", "Axe",
+    "Abaddon", "Alchemist", "Ancient Apparition", "Anti-Mage", "Arc Warden", "Axe",
     "Bane", "Batrider", "Beastmaster", "Bloodseeker", "Bounty Hunter", "Brewmaster",
     "Bristleback", "Broodmother", "Centaur Warrunner", "Chaos Knight", "Chen", "Clinkz",
     "Clockwerk", "Crystal Maiden", "Dark Seer", "Dark Willow", "Dawnbreaker", "Dazzle",
@@ -31,6 +35,9 @@ boots = [
 ]
 
 items = [
+    # Early / Accessories
+    "Falcon Blade", "Hand of Midas", "Oblivion Staff", "Orb of Corrosion",
+    "Perseverance", "Soul Ring",
     # Support
     "Aether Lens", "Aghanim's Scepter", "Blink Dagger", "Arcane Blink",
     "Overwhelming Blink", "Swift Blink", "Drum of Endurance", "Essence Distiller",
@@ -39,27 +46,30 @@ items = [
     "Pipe of Insight", "Rod of Atos", "Gleipnir", "Scythe of Vyse",
     "Spirit Vessel", "Urn of Shadows", "Veil of Discord", "Vladmir's Offering",
     # Magic
-    "Bloodstone", "Crella's Crozier", "Dagon", "Ethereal Blade", "Kaya",
-    "Kaya and Sange", "Yasha and Kaya", "Octarine Core", "Orchid Malevolence",
-    "Bloodthorn", "Parasma", "Phylactery", "Refresher Orb", "Shiva's Guard",
-    "Witch Blade",
+    "Aghanim's Blessing", "Bloodstone", "Crella's Crozier", "Dagon",
+    "Ethereal Blade", "Kaya", "Kaya and Sange", "Yasha and Kaya",
+    "Octarine Core", "Orchid Malevolence", "Bloodthorn", "Parasma",
+    "Phylactery", "Refresher Orb", "Shiva's Guard", "Witch Blade",
     # Defense
     "Aeon Disk", "Assault Cuirass", "Black King Bar", "Blade Mail",
     "Consecrated Wraps", "Crimson Guard", "Eternal Shroud", "Heart of Tarrasque",
     "Heaven's Halberd", "Linken's Sphere", "Lotus Orb", "Manta Style",
-    "Sange", "Sange and Yasha", "Vanguard",
+    "Sange", "Sange and Yasha", "Soul Booster", "Vanguard",
     # Damage
     "Abyssal Blade", "Armlet of Mordiggian", "Battle Fury", "Butterfly",
     "Crystalys", "Daedalus", "Desolator", "Diffusal Blade", "Disperser",
     "Divine Rapier", "Dragon Lance", "Echo Sabre", "Harpoon", "Eye of Skadi",
     "Helm of the Dominator", "Maelstrom", "Mjollnir", "Mage Slayer",
     "Mask of Madness", "Meteor Hammer", "Monkey King Bar", "Moon Shard",
-    "Nullifier", "Radiance", "Revenant's Brooch", "Satanic", "Shadow Blade",
-    "Silver Edge", "Skull Basher", "Yasha",
-    # Patch 7.42
-    "Bloodslinger", "Caduceus", "Ristul's Devotion", "Skypiercer",
-    "Greater Horn of Battle",
+    "Nullifier", "Quarterstaff", "Radiance", "Revenant's Brooch",
+    "Satanic", "Shadow Blade", "Silver Edge", "Skull Basher", "Yasha",
+    # Patch 7.42 shop items
+    "Bloodslinger", "Caduceus", "Ristul's Devotion", "Sabatons of Mordiggian",
+    "Skypiercer", "Starforge",
 ]
+
+# Drop-only / non-shop item from 7.42
+special_drops = ["Greater Horn of Battle"]
 
 lvls = [10, 15, 20, 25]
 talents = ["Left (1)", "Right (2)"]
@@ -68,6 +78,7 @@ skills = ["Skill 1", "Skill 2", "Skill 3"]
 while True:
     role = random.choice(roles)
     hero = random.choice(heroes)
+    early_items = random.sample(start_buy, 2)
     chosen_boots = random.choice(boots)
     build = random.sample(items, 5)
     chosen_talents = random.choices(talents, k=4)
@@ -77,6 +88,7 @@ while True:
     print(f"\nRole: {role}")
     print(f"Hero: {hero}")
     print("---------------")
+    print(f"Early item: {', '.join(early_items)}")
     print(f"Boots (Slot 1): {chosen_boots}")
     print(f"Build (in order): {', '.join(build)}")
     print("---------------")
