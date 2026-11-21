@@ -5,7 +5,7 @@ This is my first project in Python — a simple CLI build and hero randomizer fo
 ## Features
 
 - **Random Position:** Picks a role from `1 pos` (Carry) to `5 pos` (Hard Support).
-- **Full Hero Pool:** Randomly selects from all 126 Dota 2 heroes.
+- **Full Hero Pool:** Randomly selects from all 127 Dota 2 heroes.
 - **Dedicated Boots Slot:** Always assigns a random pair of boots for Slot 1.
 - **5-Item Build Order:** Picks 5 unique items from Support, Magic, Defense, Damage, and Patch 7.42 pools without duplicates.
 - **Talent Tree & Skill Priority:** Randomizes left/right talents for levels 10, 15, 20, and 25, plus which basic ability to max out first.
