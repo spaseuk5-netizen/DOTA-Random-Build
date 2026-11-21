@@ -19,5 +19,5 @@ This is my first project in Python — a simple CLI build and hero randomizer fo
 
 1. Clone the repository or download `DOTA_Random_Build.py`:
    ```bash
-   git clone [https://github.com/your-username/DOTA-Random-Build.git](https://github.com/your-username/DOTA-Random-Build.git)
+   git clone https://github.com/spaseuk5-netizen/DOTA-Random-Build.git
    cd DOTA-Random-Build
